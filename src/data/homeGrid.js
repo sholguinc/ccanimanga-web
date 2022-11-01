@@ -1,22 +1,22 @@
 export const homeGrid = [
     {
         name: "Manga",
-        path: "/manga.png",
+        path: "/talleres/manga.png",
         background: "/images/homeGrid/manga.png",
     },
     {
         name: "Origami",
-        path: "/origami",
+        path: "/talleres/origami",
         background: "/images/homeGrid/origami.jpg",
     },
     {
         name: "Shogi",
-        path: "/shogi",
+        path: "/talleres/shogi",
         background: "/images/homeGrid/shogi.jpg",
     },
     {
         name: "Papercraft",
-        path: "/papercraft",
+        path: "/talleres/papercraft",
         background: "/images/homeGrid/papercraft.png",
     },
     {

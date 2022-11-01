@@ -18,7 +18,7 @@ module.exports = {
       },
 
       fontFamily: {
-        'myfont': ['Quicksand', 'sans-serif']
+        'myFont': ['Quicksand', 'sans-serif']
       },
     },
   },

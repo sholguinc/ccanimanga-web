@@ -1,10 +1,13 @@
-// Layout
+import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
     return (
         <>
             <p>This is the header</p>
-            {children}
+            <Sidebar/>
+            <main>
+                {children}
+            </main>
             <p>This is the footer</p>
         </>
     );
