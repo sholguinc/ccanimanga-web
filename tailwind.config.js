@@ -4,8 +4,31 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
-    extend: {},
+    extend: {
+
+      colors: {
+        // Custom Colors
+        'ccam-red': '#F0555A', // Coral Pink
+      },
+
+      screens: {
+        'xsm': '480px', // => @media (min-width: 480px) { ... }
+      },
+
+      fontFamily: {
+        'myfont': ['Quicksand', 'sans-serif']
+      },
+    },
   },
-  plugins: [],
+
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
+
+  corePlugins: {
+    preflight: false,
+    aspectRatio: false,
+  }
 }
