@@ -8,7 +8,7 @@ const Home = () => {
             <SEO pageTitle="Centro Cultural Anime y Manga - CCAM" pageDescription="Centro Cultural Anime y Manga"/>
             {/*<SectionTitle />*/}
             <Activities/>
-            <p>
+            <p className='w-[20px]'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur ea eius, eum excepturi
                 laborum ratione! Commodi dicta dolores eius et incidunt laborum maxime mollitia nobis, nulla sed
                 voluptate voluptatem!

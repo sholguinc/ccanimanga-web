@@ -1,5 +1,8 @@
+import SimpleBar from "simplebar-react";
 import Sidebar from "./Sidebar";
 import CollapsedMenu from "./CollapsedMenu";
+
+import 'simplebar/dist/simplebar.min.css';
 
 const Layout = ({ children }) => {
     return (
@@ -8,7 +11,9 @@ const Layout = ({ children }) => {
                 <Sidebar/>
                 <CollapsedMenu/>
                 <main className="w-full sm:right-[80px] sm:w-[calc(100%-80px)]">
-                    {children}
+                    <SimpleBar autoHide={true} style={{ maxHeight: '100vh' }}>
+                        {children}
+                    </SimpleBar>
                 </main>
             </section>
         </>
