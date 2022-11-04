@@ -11,4 +11,4 @@ const Talleres = () => {
     );
 };
 
-export default Talleres
+export default Talleres;
