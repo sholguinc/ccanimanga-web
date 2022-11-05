@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
                 <Sidebar/>
                 <CollapsedMenu/>
                 <main className="w-full sm:right-[80px] sm:w-[calc(100%-80px)]">
-                    <SimpleBar autoHide={true} style={{ maxHeight: '100vh' }}>
+                    <SimpleBar autoHide={true} style={{ maxHeight: '100vh' }} scrollbarMinSize={150}>
                         {children}
                     </SimpleBar>
                 </main>

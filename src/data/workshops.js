@@ -1,7 +1,7 @@
 export const workshops = [
     {
         name: "Manga",
-        path: "/manga.png",
+        path: "/manga",
     },
     {
         title: "Origami",

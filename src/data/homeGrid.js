@@ -1,7 +1,7 @@
 export const homeGrid = [
     {
         name: "Manga",
-        path: "/talleres/manga.png",
+        path: "/talleres/manga",
         background: "/images/homeGrid/manga.png",
     },
     {
