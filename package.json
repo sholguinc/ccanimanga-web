@@ -15,6 +15,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "googleapis": "^109.0.1",
     "hamburger-react": "^2.5.0",
     "next": "12.3.1",
     "react": "18.2.0",

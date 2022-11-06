@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['drive.google.com'],
     loader: 'akamai',
     path: '/',
   },
+
   reactStrictMode: true,
   swcMinify: true,
+
   exportPathMap: async function (
       defaultPathMap,
       { dev, dir, outDir, distDir, buildId }
