@@ -1,9 +1,11 @@
 import "../styles/App.scss";
-import {Layout} from "../components";
+import {Layout, Loading} from "../components";
+
 
 function MyApp({ Component, pageProps }) {
   return (
       <>
+          <Loading/>
           <Layout>
             <Component {...pageProps} />
           </Layout>
