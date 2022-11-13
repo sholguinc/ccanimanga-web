@@ -11,8 +11,8 @@ const CardImage = ( {image} ) => {
     const [isLoading, setLoading] = useState(true)
 
     return (
-        <div className="group">
-            <figure className="m-0 aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200">
+        <div className="group cursor-pointer">
+            <figure className="m-0 aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
                 <Image
                     loader={myLoader}
                     src={image.id}
@@ -20,7 +20,7 @@ const CardImage = ( {image} ) => {
                     objectFit="cover"
                     alt={image.name}
                     className={concat(
-                        "group-hover:opacity-75 duration-700 ease-in-out",
+                        "group-hover:brightness-50 transition duration-150 ease-in-out",
                         isLoading
                             ? 'grayscale blur-2xl scale-110'
                             : 'grayscale-0 blur-0 scale-100'
@@ -29,10 +29,19 @@ const CardImage = ( {image} ) => {
                     placeholder="blur"
                     blurDataURL="/images/gallery/blur.jpg"
                 />
-            </figure>
 
-            <h3 className="mt-4 text-sm text-gray-700 break-words">{image.name}</h3>
-            <p className="mt-1 text-lg font-medium text-gray-900">@someone</p>
+                <div className={concat(
+                    "h-[25%] opacity-0 group-hover:opacity-100 translate-y-[400%] group-hover:translate-y-[300%]",
+                    "transition duration-150 ease-in-out",
+                    isLoading
+                        ? 'invisible'
+                        : 'visible'
+                )}>
+                    <div className="bg-black opacity-80 h-full flex justify-center items-center">
+                        <h3 className="m-0 text-lg text-white break-words w-[70%] text-center font-myFont">{image.name}</h3>
+                    </div>
+                </div>
+            </figure>
         </div>
     )
 }
