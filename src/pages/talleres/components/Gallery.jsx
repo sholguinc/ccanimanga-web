@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {useState} from "react";
 import {concat} from "src/utils";
-import driveImages from "./driveImages";
+import driveImages from "../../../utils/driveImages";
 
 
 const myLoader = ({ src }) => {
@@ -10,7 +10,7 @@ const myLoader = ({ src }) => {
 
 const CardImage = () => {
     const [isLoading, setLoading] = useState(true)
-    console.log(driveImages())
+    // console.log(driveImages())
 
     return (
         <div className="group">
