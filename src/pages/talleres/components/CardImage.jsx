@@ -31,7 +31,7 @@ const CardImage = ( {image} ) => {
                 />
             </figure>
 
-            <h3 className="mt-4 text-sm text-gray-700">Someone</h3>
+            <h3 className="mt-4 text-sm text-gray-700 break-words">{image.name}</h3>
             <p className="mt-1 text-lg font-medium text-gray-900">@someone</p>
         </div>
     )
