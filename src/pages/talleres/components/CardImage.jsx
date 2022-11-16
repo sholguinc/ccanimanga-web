@@ -19,11 +19,12 @@ const CardImage = ( {image} ) => {
                     layout="fill"
                     objectFit="cover"
                     alt={image.name}
-                    className={
+                    className={concat(
+                        "transition duration-500 ease-in-out",
                         isLoading
                             ? 'grayscale blur-2xl scale-110'
                             : 'grayscale-0 blur-0 scale-100'
-                    }
+                    )}
                     onLoadingComplete={() => setLoading(false)}
                     placeholder="blur"
                     blurDataURL="/images/gallery/blur.jpg"
