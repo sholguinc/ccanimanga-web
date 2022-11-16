@@ -33,7 +33,11 @@ const Workshop = ({ images, workshop }) => {
     return (
         <>
             <SEO pageTitle={`${workshopCapitalized} - CCAM`} pageDescription={`Taller de ${workshopCapitalized}`} />
-            <Gallery images={images}/>
+            <div className="bg-[url('/images/gallery/background.jpg')] bg-no-repeat bg-fixed bg-cover bg-center">
+                <div className="bg-black/20">
+                    <Gallery images={images}/>
+                </div>
+            </div>
         </>
     );
 };

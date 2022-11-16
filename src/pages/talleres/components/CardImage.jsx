@@ -19,26 +19,30 @@ const CardImage = ( {image} ) => {
                     layout="fill"
                     objectFit="cover"
                     alt={image.name}
-                    className={concat(
-                        "group-hover:brightness-50 transition duration-150 ease-in-out",
+                    className={
                         isLoading
                             ? 'grayscale blur-2xl scale-110'
                             : 'grayscale-0 blur-0 scale-100'
-                    )}
+                    }
                     onLoadingComplete={() => setLoading(false)}
                     placeholder="blur"
                     blurDataURL="/images/gallery/blur.jpg"
                 />
 
                 <div className={concat(
-                    "h-[25%] opacity-0 group-hover:opacity-100 translate-y-[400%] group-hover:translate-y-[300%]",
-                    "transition duration-150 ease-in-out",
+                    "bg-gradient-to-t from-black/60 to-transparent",
+                    "opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out",
                     isLoading
                         ? 'invisible'
                         : 'visible'
                 )}>
-                    <div className="bg-black opacity-80 h-full flex justify-center items-center">
-                        <h3 className="m-0 text-lg text-white break-words w-[70%] text-center font-myFont">{image.name}</h3>
+                    <div className={concat(
+                        "h-[25%] opacity-0 group-hover:opacity-100 translate-y-[300%]",
+                        "transition duration-300 ease-in-out"
+                    )}>
+                        <div className="h-full flex justify-center items-center">
+                            <h3 className="m-0 text-lg text-white break-words w-[70%] text-center font-myFont">{image.name}</h3>
+                        </div>
                     </div>
                 </div>
             </figure>
