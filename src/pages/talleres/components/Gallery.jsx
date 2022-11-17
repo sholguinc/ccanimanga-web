@@ -2,6 +2,11 @@ import CardImage from "./CardImage";
 
 
 const Gallery = ({ images }) => {
+    let galleryCards = false;
+    if (images) {
+        galleryCards = true
+    }
+
     return (
         <section>
             <div className="max-w-screen-2xl mx-auto px-5 py-8">
@@ -12,7 +17,8 @@ const Gallery = ({ images }) => {
                 </h2>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        images.map((image, index) => (
+                        galleryCards &&
+                            images.map((image, index) => (
                             <CardImage image={image} key={index}/>
                         ))
                     }

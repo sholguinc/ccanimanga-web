@@ -1,6 +1,7 @@
 import {SEO} from "../../components";
 import Gallery from './components/Gallery'
 import { capitalize } from "src/utils";
+import {driveImages} from "src/lib";
 
 // Static Paths
 export async function getStaticPaths() {
@@ -11,15 +12,13 @@ export async function getStaticPaths() {
             { params: { workshop: 'papercraft' } },
             { params: { workshop: 'shogi' } }
         ],
-        fallback: false, // can also be true or 'blocking'
+        fallback: false, // others routes will be 404.html
     }
 }
 
 // Drive Images Json
 export async function getStaticProps({params: { workshop }}) {
-    const url = `${process.env.API_URL}/api/drive-images/${workshop}`
-    const response = await fetch(url);
-    const images = await response.json();
+    const images = await driveImages(workshop)
     return {
         props: {
             images,

@@ -10,15 +10,22 @@ const CardImage = ( {image} ) => {
     // Image Loading
     const [isLoading, setLoading] = useState(true)
 
+    // parameters
+    let imageID, imageName;
+    if (image) {
+        imageID = image.id
+        imageName = image.name
+    }
+
     return (
         <div className="group cursor-pointer">
             <figure className="m-0 aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
                 <Image
                     loader={myLoader}
-                    src={image.id}
+                    src={imageID}
                     layout="fill"
                     objectFit="cover"
-                    alt={image.name}
+                    alt={imageName}
                     className={concat(
                         "transition duration-500 ease-in-out",
                         isLoading
@@ -42,7 +49,7 @@ const CardImage = ( {image} ) => {
                         "transition duration-300 ease-in-out"
                     )}>
                         <div className="h-full flex justify-center items-center">
-                            <h3 className="m-0 text-lg text-white break-words w-[70%] text-center font-myFont">{image.name}</h3>
+                            <h3 className="m-0 text-lg text-white break-words w-[70%] text-center font-myFont">{imageName}</h3>
                         </div>
                     </div>
                 </div>
