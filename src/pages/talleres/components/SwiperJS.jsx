@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { useContext } from "react";
-import { CarouselContext } from "./CarouselContext";
+import { CarouselContext } from "src/components";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,6 +19,11 @@ const SwiperJS = ({slides, prevRef, nextRef}) => {
         swiperSliders = true
     }
 
+    let prevElement, nextElement
+    if (prevRef) { prevElement = prevRef.current }
+    if (nextRef) { nextElement = nextRef.current }
+
+
     const handleClick = (e) => {
         e.stopPropagation()
     }
@@ -29,8 +34,8 @@ const SwiperJS = ({slides, prevRef, nextRef}) => {
             // install Swiper modules
             modules={[Navigation]}
             navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
+                prevEl: prevElement,
+                nextEl: nextElement,
             }}
             speed={300}
             slidesPerView={1}

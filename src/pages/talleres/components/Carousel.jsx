@@ -1,7 +1,7 @@
 import {useContext, useRef} from "react";
 import SwiperJS from "./SwiperJS";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {CarouselContext} from "./CarouselContext";
+import { CarouselContext } from "src/components";
 import {
     faAngleLeft,
     faAngleRight,

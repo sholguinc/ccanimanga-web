@@ -2,7 +2,7 @@ import {SEO} from "../../components";
 import Gallery from './components/Gallery'
 import { capitalize } from "src/utils";
 import {driveImages} from "src/lib";
-import { CarouselContextProvider } from "./components/CarouselContext";
+import {CarouselContextProvider} from "src/components";
 
 // Static Paths
 export async function getStaticPaths() {

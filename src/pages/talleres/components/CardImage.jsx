@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {useContext, useState} from "react";
 import { concat } from "src/utils";
-import {CarouselContext} from "./CarouselContext";
+import {CarouselContext} from "../../../components/CarouselContext";
 
 const myLoader = ({ src }) => {
     return `https://drive.google.com/uc?export=view&id=${src}`

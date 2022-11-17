@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import CardImage from "./CardImage";
 import Carousel from "./Carousel";
-import { CarouselContext } from "./CarouselContext";
+import { CarouselContext } from "src/components";
 import { concat } from 'src/utils'
 
 const Gallery = ({ images }) => {
