@@ -2,6 +2,7 @@ import {SEO} from "../../components";
 import Gallery from './components/Gallery'
 import { capitalize } from "src/utils";
 import {driveImages} from "src/lib";
+import { CarouselContextProvider } from "./components/CarouselContext";
 
 // Static Paths
 export async function getStaticPaths() {
@@ -34,7 +35,9 @@ const Workshop = ({ images, workshop }) => {
             <SEO pageTitle={`${workshopCapitalized} - CCAM`} pageDescription={`Taller de ${workshopCapitalized}`} />
             <div className="bg-[url('/images/gallery/background.jpg')] bg-no-repeat bg-fixed bg-cover bg-center">
                 <div className="bg-black/20">
-                    <Gallery images={images}/>
+                    <CarouselContextProvider>
+                        <Gallery images={images}/>
+                    </CarouselContextProvider>
                 </div>
             </div>
         </>

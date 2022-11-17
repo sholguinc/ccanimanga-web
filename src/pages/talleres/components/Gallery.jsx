@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import CardImage from "./CardImage";
-
+import Carousel from "./Carousel";
+import { CarouselContext } from "./CarouselContext";
+import { concat } from 'src/utils'
 
 const Gallery = ({ images }) => {
+    const { gallery } = useContext(CarouselContext);
     let galleryCards = false;
     if (images) {
         galleryCards = true
@@ -19,10 +23,17 @@ const Gallery = ({ images }) => {
                     {
                         galleryCards &&
                             images.map((image, index) => (
-                            <CardImage image={image} key={index}/>
+                            <CardImage image={image} key={index} index={index}/>
                         ))
                     }
                 </div>
+            </div>
+
+            <div className={concat(
+                "max-sm:hidden",
+                gallery ? 'visible' : 'invisible transition-[visibility] delay-100 duration-0'
+            )}>
+                <Carousel slides={images} />
             </div>
         </section>
     );

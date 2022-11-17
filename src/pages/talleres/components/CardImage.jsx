@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { useState } from "react";
+import {useContext, useState} from "react";
 import { concat } from "src/utils";
+import {CarouselContext} from "./CarouselContext";
 
 const myLoader = ({ src }) => {
     return `https://drive.google.com/uc?export=view&id=${src}`
 }
 
-const CardImage = ( {image} ) => {
+const CardImage = ( {image, index} ) => {
     // Image Loading
     const [isLoading, setLoading] = useState(true)
 
@@ -17,9 +18,24 @@ const CardImage = ( {image} ) => {
         imageName = image.name
     }
 
+    // Context
+    const { openGallery } = useContext(CarouselContext);
+
+    // openCarousel
+    const openCarousel = (index) => {
+        let viewportWidth = document.documentElement.clientWidth;
+        if ((!isLoading) && ( viewportWidth > 640)) {
+            console.log(viewportWidth)
+            openGallery(index)
+        }
+    };
+
     return (
         <div className="group cursor-pointer">
-            <figure className="m-0 aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+            <figure
+                className="m-0 aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200"
+                onClick={() => {openCarousel(index)}}
+            >
                 <Image
                     loader={myLoader}
                     src={imageID}
