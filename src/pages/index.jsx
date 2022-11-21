@@ -1,9 +1,10 @@
+import { AboutUs } from "./aboutUs";
 import Home from "./home";
 
 const Index = () => {
     return (
         <>
-            <Home/>
+            <AboutUs/>
         </>
     );
 };
