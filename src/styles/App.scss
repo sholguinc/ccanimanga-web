@@ -16,9 +16,9 @@
 
 html,
 body {
-  padding: 0;
   margin: 0;
-
+  padding-top: 0px;
+  
   main {
     .simplebar-scrollbar::before {
       color: var(--transparent);

@@ -6,7 +6,7 @@ import {homeGrid} from "../../../data";
 const Activities = () => {
     return (
         <>
-        <section className="workshops">
+        <section className="workshops ">
             {/* Grid Container */}
             <div className="grid lg:grid-cols-5">
                 {/* Grid Elements */}
