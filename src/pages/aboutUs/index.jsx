@@ -12,11 +12,14 @@ export const AboutUs = () => {
     <div>
     <SEO pageTitle="Acerca de Nosotros - CCAM" pageDescription="Informacion acerca del CCAM"></SEO>
         <Title/>
-        <History/>
-        <Mission/>
-        <Vision/>
-        <Culture/>
-        <UNI/>
+        <div className='md:container md:mx-auto'>
+          <History/>
+          <Mission/>
+          <Vision/>
+          <Culture/>
+          <UNI/>
+        </div>
+        
     </div>
   )
 }
