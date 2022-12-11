@@ -13,9 +13,9 @@ const Gallery = ({ images }) => {
 
     return (
         <section>
-            <div className="max-w-screen-2xl mx-auto px-5 py-8">
+            <div className="max-w-screen-2xl mx-auto px-5 py-12 sm:py-14 xl:py-28">
                 <h2 className="m-0 pb-[25px] pl-[10px] font-myFont text-white text-3xl
-                    sm:pl-[20px] sm:pb-[30px] sm:text-4xl xl:text-5xl xl:pl-[30px] xl:pb-[35px]"
+                    sm:pl-[20px] sm:pb-[30px] sm:text-4xl xl:text-5xl xl:pl-[30px] xl:pb-[60px]"
                 >
                     Trabajos Finales
                 </h2>
