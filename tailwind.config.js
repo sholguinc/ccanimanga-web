@@ -18,8 +18,20 @@ module.exports = {
       },
 
       fontFamily: {
-        'myFont': ['Quicksand', 'sans-serif']
+        'myFont': ['Quicksand', 'sans-serif'],
+        'jp': ['Noto Serif JP', 'serif'],
       },
+
+      animation: {
+        scrollTop: 'toBounce 0.75s ease-in-out',
+      },
+
+      keyframes: {
+        toBounce: {
+          '0%, 50%, 100%': { transform: 'translateY(0)' },
+          '25%, 75%': { transform: 'translateY(-10%)' },
+        }
+      }
     },
   },
 

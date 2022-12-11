@@ -34,7 +34,6 @@ export async function getStaticProps({params: {workshop}}) {
 const Workshop = ({images, workshop}) => {
     const workshopCapitalized = capitalize(workshop)
     const workshopInfo = workshops[workshop];
-    console.log(workshopInfo.background)
 
     return (
         <>
