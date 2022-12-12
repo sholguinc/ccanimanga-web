@@ -1,17 +1,18 @@
-import {useState} from "react";
+import {useContext} from "react";
 import Hamburger from 'hamburger-react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { MenuContext } from "./MenuContext";
 
 
 const Sidebar = () => {
-    const [isOpen, setOpen] = useState(false)
+    const {menu, setMenu} = useContext(MenuContext);
 
     return (
-        <aside className="hidden m-0 block bg-ccam-red fixed top-0 right-0 w-[80px] h-full z-50 sm:block">
+        <aside className="hidden m-0 block bg-ccam-red fixed top-0 right-0 w-[80px] h-full z-[100] sm:block">
             {/* Menu */}
             <div className="absolute bottom-[50%] right-[50%] translate-x-2/4 translate-y-2/4">
-                <Hamburger size={45} toggled={isOpen} toggle={setOpen} direction="left" duration={0.4} color="white" rounded/>
+                <Hamburger size={45} toggled={menu} toggle={setMenu} direction="left" duration={0.4} color="white" rounded/>
             </div>
 
             {/* Social Media */}

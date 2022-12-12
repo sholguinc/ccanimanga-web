@@ -3,5 +3,6 @@ import SEO from "./SEO";
 import Sidebar from "./Sidebar";
 import Loading from "./Loading";
 import { CarouselContext, CarouselContextProvider } from "./CarouselContext";
+import { MenuContext, MenuContextProvider } from "./MenuContext";
 
-export { Layout, SEO, Sidebar, Loading, CarouselContext, CarouselContextProvider }
+export { Layout, SEO, Sidebar, Loading, CarouselContext, CarouselContextProvider, MenuContext, MenuContextProvider }
